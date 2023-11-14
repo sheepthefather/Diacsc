@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    
+    <uses-permission
+        android:name="android.permission.USE_FULL_SCREEN_INTENT"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:name=".DiacscApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Diacsc"
+        tools:targetApi="31">
+        <activity
+            android:name=".myQRCodeActivity.MyQRCodeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_qrcode"
+            android:theme="@style/Theme.Diacsc" />
+        <activity
+            android:name=".userInfoActivity.UserInfoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/Theme.Diacsc" />
+        <activity
+            android:name=".addFriendsActivity.AddFriendActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_firend"
+            android:theme="@style/Theme.Diacsc" />
+        <activity
+            android:name=".settingActivity.SetingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_seting"
+            android:theme="@style/Theme.Diacsc" />
+        <activity
+            android:name=".loginActivity.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Diacsc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.ConnectionService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".connectionActivity.ConnectionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_connection"
+            android:theme="@style/Theme.Diacsc"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Diacsc" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+    </application>
+
+</manifest>

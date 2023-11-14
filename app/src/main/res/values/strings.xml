@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Diacsc</string>
+    <string name="title_activity_connection">ConnectionActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_seting">SetingActivity</string>
+    <string name="title_activity_add_firend">AddFirendActivity</string>
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_my_qrcode">MyQRCodeActivity</string>
+</resources>
